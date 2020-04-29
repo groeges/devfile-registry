@@ -61,7 +61,7 @@
     "projectType": "docker",
     "language": "java",
     "links": {
-      "self": "https://github.com/ajm01/odo-run-sampleproj/blob/master/devfile.yaml"
+      "self": "https://raw.githubusercontent.com/ajm01/odo-run-sampleproj/master/devfile.yaml"
     }
   }
 ]
