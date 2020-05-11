@@ -51,7 +51,7 @@
     }
   },
   {
-    "displayName": "Java OpenLiberty Andrew",
+    "displayName": "Java OpenLiberty (Andrew)",
     "description": "Java OpenLiberty",
     "tags": [
       "Java",
@@ -61,7 +61,7 @@
     "projectType": "docker",
     "language": "java",
     "links": {
-      "self": "/devfiles/javaOpenLiberty/devfile.yaml"
+      "self": "https://raw.githubusercontent.com/groeges/odo-run-sampleproj/master/devfile.yaml"
     }
   }
 ]
