@@ -3,3 +3,5 @@ description: Stack with NodeJS 10
 tags: ["NodeJS", "Express", "ubi8"]
 projectType: "nodejs"
 language: "nodejs"
+icon: /images/nodejs.svg
+globalMemoryLimit: 1686Mi
