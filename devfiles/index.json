@@ -13,8 +13,8 @@
     }
   },
   {
-    "displayName": "NodeJS Express Web Application",
-    "description": "Stack with NodeJS 10",
+    "displayName": "NodeJS Application",
+    "description": "Stack with NodeJS",
     "tags": [
       "NodeJS",
       "Express",
