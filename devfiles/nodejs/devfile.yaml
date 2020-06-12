@@ -1,31 +1,43 @@
-apiVersion: 1.0.0
+schemaVersion: 2.0.0
 metadata:
-  generateName: nodejs-
+  name: nodejs
+  dockerfile: "https://raw.githubusercontent.com/groeges/devfile-registry/master/devfiles/nodejs/Dockerfile"
+  deployment-manifest: "https://raw.githubusercontent.com/groeges/devfile-registry/master/devfiles/nodejs/deploy.yaml"
 projects:
-  -
-    name: nodejs-web-app
-    source:
-      type: git
-      location: "https://github.com/che-samples/web-nodejs-sample.git"
+  - name: express
+    git:
+      location: https://github.com/neeraj-laad/nodejs-basic-starter.git
 components:
-  - type: dockerimage
-    alias: runtime
-    image: quay.io/eclipse/che-nodejs10-ubi:nightly
-    memoryLimit: 1024Mi
-    mountSources: true
-    endpoints:
-      - name: "3000/tcp"
-        port: 3000
+  - container:
+      image: registry.access.redhat.com/ubi8/nodejs-12:1-36
+      mountSources: true
+      name: node12
+      memoryLimit: 1024Mi
+      endpoints:
+        - name: nodejs
+          targetPort: 3000
+          configuration:
+            protocol: tcp
+            scheme: http
+            type: terminal
+        - name: debug
+          targetPort: 9229
+          configuration:
+            protocol: tcp
+            scheme: http
+            type: terminal
 commands:
-  - name: devBuild
-    actions:
-      - type: exec
-        component: runtime
-        command: npm install
-        workdir: ${CHE_PROJECTS_ROOT}/nodejs-web-app/app
-  - name: devRun
-    actions:
-      - type: exec
-        component: runtime
-        command: nodemon app.js
-        workdir: ${CHE_PROJECTS_ROOT}/nodejs-web-app/app
+  - exec:
+      id: download app dependencies
+      commandLine: "npm install"
+      component: node12
+      workingDir: ${CHE_PROJECTS_ROOT}/express
+      group:
+        kind: build
+  - exec:
+      id: run the app
+      commandLine: "npm start"
+      component: node12
+      workingDir: ${CHE_PROJECTS_ROOT}/express
+      group:
+        kind: run
