@@ -49,19 +49,5 @@
     "links": {
       "self": "/devfiles/springBoot/devfile.yaml"
     }
-  },
-  {
-    "displayName": "Java OpenLiberty (Andrew)",
-    "description": "Java OpenLiberty",
-    "tags": [
-      "Java",
-      "OpenLiberty"
-    ],
-    "globalMemoryLimit": "2674Mi",
-    "projectType": "docker",
-    "language": "java",
-    "links": {
-      "self": "https://raw.githubusercontent.com/groeges/odo-run-sampleproj/master/devfile.yaml"
-    }
   }
 ]
