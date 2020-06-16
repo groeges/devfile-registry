@@ -14,7 +14,7 @@ spec:
         app: PROJECT_NAME
     spec:
       containers:
-        - name: web
+        - name: PROJECT_NAME
           image: CONTAINER_IMAGE
           ports:
             - name: http
