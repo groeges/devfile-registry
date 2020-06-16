@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: PROJECT_NAME
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: PROJECT_NAME
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: PROJECT_NAME
+    spec:
+      containers:
+        - name: web
+          image: CONTAINER_IMAGE
+          ports:
+            - name: http
+              containerPort: PORT
+              protocol: TCP
