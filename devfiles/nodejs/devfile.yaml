@@ -3,7 +3,7 @@ metadata:
   name: nodejs
   version: 1.0.0
   dockerfile: "https://raw.githubusercontent.com/groeges/devfile-registry/master/devfiles/nodejs/Dockerfile"
-  deployment-manifest: "https://raw.githubusercontent.com/groeges/devfile-registry/master/devfiles/nodejs/deploy.yaml"
+  deployment-manifest: "https://raw.githubusercontent.com/groeges/devfile-registry/master/devfiles/nodejs/deploy_runtimecomponent.yaml"
 projects:
   - name: express
     git:
