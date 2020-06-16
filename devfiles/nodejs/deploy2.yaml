@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: PROJECT_NAME
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: PROJECT_NAME
