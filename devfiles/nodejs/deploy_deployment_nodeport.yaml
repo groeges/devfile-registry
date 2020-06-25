@@ -35,6 +35,7 @@
         - protocol: TCP
           port: PORT
           targetPort: PORT
+          nodePort: 30007
       selector:
         app: COMPONENT_NAME
       type: NodePort
