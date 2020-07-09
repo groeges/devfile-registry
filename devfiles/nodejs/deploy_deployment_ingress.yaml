@@ -38,13 +38,13 @@ spec:
   externalTrafficPolicy: Cluster
 ---
 kind: Ingress
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: COMPONENT_NAME
 spec:
   rules:
-    - http: COMPONENT_NAME-HOST
+    - http: COMPONENT_NAME-myproject.apps.poplin.os.fyre.ibm.com
         paths:
           - backend:
               serviceName: COMPONENT_NAME
