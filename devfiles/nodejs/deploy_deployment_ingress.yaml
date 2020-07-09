@@ -44,7 +44,7 @@ metadata:
   name: COMPONENT_NAME
 spec:
   rules:
-    - http:
+    - http: COMPONENT_NAME-HOST
         paths:
           - backend:
               serviceName: COMPONENT_NAME
