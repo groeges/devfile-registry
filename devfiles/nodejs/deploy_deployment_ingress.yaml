@@ -43,7 +43,7 @@ metadata:
   name: COMPONENT_NAME
 spec:
   rules:
-    - host: "COMPONENT_NAME-myproject.apps.poplin.os.fyre.ibm.com"
+    - host: COMPONENT_NAME-NAMESPACE-HOST_NAME
       http:
         paths:
           - path: /
