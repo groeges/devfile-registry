@@ -35,26 +35,6 @@
         - protocol: TCP
           port: PORT
           targetPort: PORT
-          nodePort: 30007
-      selector:
+       selector:
         app: COMPONENT_NAME
       type: NodePort
-    ---
-    kind: Route
-    apiVersion: route.openshift.io/v1
-    metadata:
-      name: COMPONENT_NAME
-      labels:
-        app.kubernetes.io/instance: COMPONENT_NAME
-        app.kubernetes.io/name: COMPONENT_NAME
-        app.kubernetes.io/part-of: COMPONENT_NAME
-      annotations:
-        openshift.io/host.generated: 'true'
-    spec:
-      to:
-        kind: Service
-        name: COMPONENT_NAME
-        weight: 100
-      port:
-        targetPort: PORT
-      wildcardPolicy: None
