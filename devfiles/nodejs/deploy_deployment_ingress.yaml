@@ -1,38 +1,38 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: COMPONENT_NAME
+  name: {{.COMPONENT_NAME}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: COMPONENT_NAME
+      app: {{.COMPONENT_NAME}}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: COMPONENT_NAME
+        app: {{.COMPONENT_NAME}}
     spec:
       containers:
-        - name: COMPONENT_NAME
-          image: CONTAINER_IMAGE
+        - name: {{.COMPONENT_NAME}}
+          image: {{.CONTAINER_IMAGE}}
           ports:
             - name: http
-              containerPort: PORT
+              containerPort: {{.PORT}}
               protocol: TCP
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: COMPONENT_NAME
+  name: {{.COMPONENT_NAME}}
 spec:
   ports:
-    - name: PORT-tcp
+    - name: {{.PORT}}-tcp
       protocol: TCP
-      port: PORT
-      targetPort: PORT
+      port: {{.PORT}}
+      targetPort: {{.PORT}}
   selector:
-    app: COMPONENT_NAME
+    app: {{.COMPONENT_NAME}}
   type: NodePort
   sessionAffinity: None
   externalTrafficPolicy: Cluster
@@ -40,13 +40,13 @@ spec:
 kind: Ingress
 apiVersion: networking.k8s.io/v1beta1
 metadata:
-  name: COMPONENT_NAME
+  name: {{.COMPONENT_NAME}}
 spec:
   rules:
-    - host: COMPONENT_NAME-NAMESPACE-HOST_NAME
+    - host: {{.COMPONENT_NAME}}-{{.NAMESPACE}}-{{.HOST_NAME}}
       http:
         paths:
           - path: /
             backend:
-              serviceName: COMPONENT_NAME
-              servicePort: PORT-tcp
+              serviceName: {{.COMPONENT_NAME}}
+              servicePort: {{}.PORT}}-tcp
