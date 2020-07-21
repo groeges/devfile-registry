@@ -1,10 +1,6 @@
 apiVersion: appsody.dev/v1beta1
 kind: AppsodyApplication
 metadata:
-    labels:
-        app.kubernetes.io/instance: {{.COMPONENT_NAME}}
-        app.kubernetes.io/name: {{.COMPONENT_NAME}}
-        app.kubernetes.io/part-of: {{.COMPONENT_NAME}}
     name: {{.COMPONENT_NAME}}
 spec:
     applicationImage: {{.CONTAINER_IMAGE}}
