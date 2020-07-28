@@ -6,7 +6,7 @@ spec:
   applicationImage: {{.CONTAINER_IMAGE}}
   service:
     type: ClusterIP
-    port: PORT
+    port: {{.PORT}}
   expose: true
   storage:
     size: 2Gi
