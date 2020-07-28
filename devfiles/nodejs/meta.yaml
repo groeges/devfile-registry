@@ -1,6 +1,6 @@
----
-displayName: NodeJS Express Web Application
-description: Stack with NodeJS 10
+name: nodejs
+displayName: NodeJS Runtime
+description: Stack with NodeJS 12
 tags: ["NodeJS", "Express", "ubi8"]
-icon: /images/nodejs.svg
-globalMemoryLimit: 1686Mi
+projectType: "nodejs"
+language: "nodejs"

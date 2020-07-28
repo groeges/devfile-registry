@@ -1,6 +1,0 @@
----
-displayName: Maven Java
-description: Upstream Maven and OpenJDK 11
-tags: ["Java", "Maven"]
-icon: /images/java.svg
-globalMemoryLimit: 2674Mi

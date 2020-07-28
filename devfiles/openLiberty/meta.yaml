@@ -1,8 +1,0 @@
----
-displayName: "Open Liberty"
-description: "Open Liberty microservice in Java"
-image: docker.io/kabanero/java-openliberty:0.2
-version: 0.2.3
-tags: ["Java", "maven", "ubi"]
-icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
-globalMemoryLimit: 1686Mi
