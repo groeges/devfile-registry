@@ -1,20 +1,18 @@
 [
   {
-    "displayName": "Maven Java",
-    "description": "Upstream Maven and OpenJDK 11",
-    "tags": [
-      "Java",
-      "Maven"
-    ],
-    "projectType": "maven",
+    "name": "java-openliberty",
+    "displayName": "Open Liberty",
+    "description": "Open Liberty microservice in Java",
+    "projectType": "docker",
     "language": "java",
     "links": {
-      "self": "/devfiles/maven/devfile.yaml"
+      "self": "/devfiles/java-openliberty/devfile.yaml"
     }
   },
   {
-    "displayName": "NodeJS Application",
-    "description": "Stack with NodeJS",
+    "name": "nodejs",
+    "displayName": "NodeJS Runtime",
+    "description": "Stack with NodeJS 12",
     "tags": [
       "NodeJS",
       "Express",
@@ -24,30 +22,6 @@
     "language": "nodejs",
     "links": {
       "self": "/devfiles/nodejs/devfile.yaml"
-    }
-  },
-  {
-    "displayName": "Open Liberty",
-    "description": "Open Liberty microservice in Java",
-    "projectType": "docker",
-    "language": "java",
-    "links": {
-      "self": "/devfiles/openLiberty/devfile.yaml"
-    }
-  },
-  {
-    "displayName": "Spring Boot®",
-    "description": "Spring Boot® using Java",
-    "tags": [
-      "Java",
-      "Spring"
-    ],
-    "globalMemoryLimit": "2674Mi",
-    "icon": "https://www.eclipse.org/che/images/logo-eclipseche.svg",
-    "projectType": "spring",
-    "language": "java",
-    "links": {
-      "self": "/devfiles/springBoot/devfile.yaml"
     }
   }
 ]
